@@ -1,10 +1,9 @@
 """
-model_1_no_const
-限于设备，本代码适应于claims无参考property的外键约束， 由此在完成某些查询任务时可能面临问题
-"""
+直接读取压缩文件以创建所有item和property表，之后再读取小数据以创建其他表"""
 import json
 import os
 import pymysql
+from bz2 import BZ2File
 import time
 
 # 用于避免转义
